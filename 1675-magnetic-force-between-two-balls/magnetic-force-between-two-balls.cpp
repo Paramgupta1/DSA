@@ -1,13 +1,13 @@
 class Solution {
     bool ispossible(vector<int> &arr,int mid, int m) {
-        int cow = 1;
+        int mag = 1;
         int pos =arr[0];
         for(int i=1;i<arr.size();i++){
             if(arr[i]-pos>=mid){
-                cow++;
+                mag++;
                 pos = arr[i];
             }
-            if(cow==m)
+            if(mag==m)
                 return true;
         }
         return false;
